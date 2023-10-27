@@ -19,6 +19,7 @@ class WinScreen {
         this.backgroundElement.style.width = `${this.backgroundSize.w}px`
         this.backgroundElement.style.height = `${this.backgroundSize.h}px`
         this.backgroundElement.style.backgroundSize = "100%"
+        this.backgroundElement.style.zIndex = "2"
         this.gameScreen.appendChild(this.backgroundElement)
 
         this.octopus = document.createElement("figure")
@@ -28,7 +29,7 @@ class WinScreen {
         this.octopus.style.height = "600px"
         this.octopus.style.left = `${this.position.left}px`
         this.octopus.style.top = `${this.position.top}px`
-
+        this.octopus.style.zIndex = "2"
         this.octopus.style.backgroundSize = "100%"
         this.octopus.style.backgroundRepeat = "no-repeat"
         this.gameScreen.appendChild(this.octopus)
@@ -36,6 +37,7 @@ class WinScreen {
         this.win = document.createElement("figure")
         this.win.style.backgroundImage = ("url('./img/winText.png')")
         this.win.style.position = "absolute"
+        this.win.style.zIndex = "2"
         this.win.style.width = "200px"
         this.win.style.height = "200px"
         this.win.style.left = `${this.position.left + 95}px`
